@@ -32,18 +32,26 @@ public class ThemeHelpers {
 
         int[] retryScreenSlideshowImages = new int[]{R.drawable.zoom_ideal_1, R.drawable.zoom_ideal_2, R.drawable.zoom_ideal_3, R.drawable.zoom_ideal_4, R.drawable.zoom_ideal_5};
 
-            int primaryColor = Color.parseColor("#1797E3"); // white
-            int backgroundColor = Color.parseColor("#FFFFFF"); // navy
-            int numio = Color.parseColor("#42C560");
-            int buttonText = Color.parseColor("#414141");
+//             int primaryColor = Color.parseColor("#1797E3"); // white
+//             int backgroundColor = Color.parseColor("#FFFFFF"); // navy
+//             int numio = Color.parseColor("#42C560");
+//             int buttonText = Color.parseColor("#414141");
+             int secondaryColor = Color.parseColor("#E2E5E5");
+             int primaryColor = Color.parseColor("#E94C38");
+            //            let secondaryColor = UIColor(red: 0.235, green: 0.702, blue: 0.443, alpha: 1) // green
+                        int backgroundColor = Color.parseColor("#FCFFFF"); // gray
+                        int buttonTextColor = Color.parseColor("#FFFFFF"); // white
+                         int buttonBackgroundHighlightColor = Color.parseColor("#ea5a48");
+                        int buttonBackgroundDisabledColor =  Color.parseColor("#f18679");
+                        int textColor = Color.parseColor("#191d1f");
 
       // Overlay Customization
             currentCustomization.getOverlayCustomization().backgroundColor = backgroundColor;
-            currentCustomization.getOverlayCustomization().showBrandingImage = true;
+            currentCustomization.getOverlayCustomization().showBrandingImage = false;
             currentCustomization.getOverlayCustomization().brandingImage = R.color.zoom_hint_white;
             // Guidance Customization
             currentCustomization.getGuidanceCustomization().backgroundColors = backgroundColor;
-            currentCustomization.getGuidanceCustomization().foregroundColor = primaryColor;
+            currentCustomization.getGuidanceCustomization().foregroundColor = textColor;
             currentCustomization.getGuidanceCustomization().headerFont = ResourcesCompat.getFont(context, R.font.nunito_bold);
             currentCustomization.getGuidanceCustomization().headerTextSize = 24;
             currentCustomization.getGuidanceCustomization().headerTextSpacing = 0.05f;
@@ -51,73 +59,73 @@ public class ThemeHelpers {
             currentCustomization.getGuidanceCustomization().subtextTextSize = 14;
             currentCustomization.getGuidanceCustomization().subtextTextSpacing = 0f;
             currentCustomization.getGuidanceCustomization().buttonFont = ResourcesCompat.getFont(context, R.font.nunito_bold);
-            currentCustomization.getGuidanceCustomization().buttonTextSize = 16;
+            currentCustomization.getGuidanceCustomization().buttonTextSize = 20;
             currentCustomization.getGuidanceCustomization().buttonTextSpacing = 0.05f;
-            currentCustomization.getGuidanceCustomization().buttonTextNormalColor = buttonText;
-            currentCustomization.getGuidanceCustomization().buttonBackgroundNormalColor = numio;
-            currentCustomization.getGuidanceCustomization().buttonTextHighlightColor = buttonText;
-            currentCustomization.getGuidanceCustomization().buttonBackgroundHighlightColor = Color.parseColor("#BFFFFFFF");
+            currentCustomization.getGuidanceCustomization().buttonTextNormalColor = buttonTextColor;
+            currentCustomization.getGuidanceCustomization().buttonBackgroundNormalColor = primaryColor;
+            currentCustomization.getGuidanceCustomization().buttonTextHighlightColor = backgroundColor;
+            currentCustomization.getGuidanceCustomization().buttonBackgroundHighlightColor = Color.parseColor("#ea5a48");
             currentCustomization.getGuidanceCustomization().buttonTextDisabledColor = Color.parseColor("#4D1D174F");
-            currentCustomization.getGuidanceCustomization().buttonBackgroundDisabledColor = numio;
-            currentCustomization.getGuidanceCustomization().buttonBorderColor = numio;
-          currentCustomization.getGuidanceCustomization().buttonCornerRadius = 30;
+            currentCustomization.getGuidanceCustomization().buttonBackgroundDisabledColor = buttonBackgroundDisabledColor;
+            currentCustomization.getGuidanceCustomization().buttonBorderColor = Color.parseColor("#00ff0000");
+          currentCustomization.getGuidanceCustomization().buttonCornerRadius = 14;
 
-          currentCustomization.getGuidanceCustomization().buttonBorderWidth = 1;
+          currentCustomization.getGuidanceCustomization().buttonBorderWidth = 0;
 //            currentCustomization.getGuidanceCustomization().buttonCornerRadius = 2;
             currentCustomization.getGuidanceCustomization().buttonRelativeWidth = 1.0f;
-            currentCustomization.getGuidanceCustomization().readyScreenOvalFillColor = Color.parseColor("#4DFFFFFF");
+            currentCustomization.getGuidanceCustomization().readyScreenOvalFillColor = Color.argb(0,255,255,255);
             currentCustomization.getGuidanceCustomization().readyScreenTextBackgroundColor = backgroundColor;
-            currentCustomization.getGuidanceCustomization().readyScreenTextBackgroundCornerRadius = 2;
-            currentCustomization.getGuidanceCustomization().readyScreenSubtextTextColor = numio;
+            currentCustomization.getGuidanceCustomization().readyScreenTextBackgroundCornerRadius = 5;
+            currentCustomization.getGuidanceCustomization().readyScreenSubtextTextColor = textColor;
 
-          currentCustomization.getGuidanceCustomization().retryScreenImageBorderColor = primaryColor;
+          currentCustomization.getGuidanceCustomization().retryScreenImageBorderColor = secondaryColor;
             currentCustomization.getGuidanceCustomization().retryScreenImageBorderWidth = 2;
-            currentCustomization.getGuidanceCustomization().retryScreenImageCornerRadius = 2;
-            currentCustomization.getGuidanceCustomization().retryScreenOvalStrokeColor = primaryColor;
+            currentCustomization.getGuidanceCustomization().retryScreenImageCornerRadius = 10;
+            currentCustomization.getGuidanceCustomization().retryScreenOvalStrokeColor = backgroundColor;
             currentCustomization.getGuidanceCustomization().retryScreenSlideshowImages = retryScreenSlideshowImages;
             currentCustomization.getGuidanceCustomization().retryScreenSlideshowInterval = 1500;
             currentCustomization.getGuidanceCustomization().enableRetryScreenSlideshowShuffle = false;
-            currentCustomization.getGuidanceCustomization().enableRetryScreenBulletedInstructions = false;
-            currentCustomization.getGuidanceCustomization().cameraPermissionsScreenImage = R.drawable.camera_white_navy;
+            currentCustomization.getGuidanceCustomization().enableRetryScreenBulletedInstructions = true;
+            currentCustomization.getGuidanceCustomization().cameraPermissionsScreenImage = R.drawable.credo_camera;
             // ID Scan Customization
             currentCustomization.getIdScanCustomization().showSelectionScreenBrandingImage = false;
             currentCustomization.getIdScanCustomization().selectionScreenBrandingImage = 0;
             currentCustomization.getIdScanCustomization().selectionScreenBackgroundColors = backgroundColor;
             currentCustomization.getIdScanCustomization().reviewScreenBackgroundColors = backgroundColor;
-            currentCustomization.getIdScanCustomization().captureScreenForegroundColor = primaryColor;
-            currentCustomization.getIdScanCustomization().reviewScreenForegroundColor = backgroundColor;
-            currentCustomization.getIdScanCustomization().selectionScreenForegroundColor = primaryColor;
-            currentCustomization.getIdScanCustomization().captureScreenFocusMessageTextColor = primaryColor;
+            currentCustomization.getIdScanCustomization().captureScreenForegroundColor = textColor;
+            currentCustomization.getIdScanCustomization().reviewScreenForegroundColor = textColor;
+            currentCustomization.getIdScanCustomization().selectionScreenForegroundColor = textColor;
+            currentCustomization.getIdScanCustomization().captureScreenFocusMessageTextColor = textColor;
             currentCustomization.getIdScanCustomization().headerFont = ResourcesCompat.getFont(context, R.font.nunito_bold);
-            currentCustomization.getIdScanCustomization().headerTextSize = 24;
+            currentCustomization.getIdScanCustomization().headerTextSize = 26;
             currentCustomization.getIdScanCustomization().headerTextSpacing = 0.05f;
             currentCustomization.getIdScanCustomization().subtextFont = ResourcesCompat.getFont(context, R.font.nunito_regular);
-            currentCustomization.getIdScanCustomization().subtextTextSize = 14;
+            currentCustomization.getIdScanCustomization().subtextTextSize = 16;
             currentCustomization.getIdScanCustomization().subtextTextSpacing = 0f;
             currentCustomization.getIdScanCustomization().buttonFont = ResourcesCompat.getFont(context, R.font.nunito_bold);
             currentCustomization.getIdScanCustomization().buttonTextSize = 20;
             currentCustomization.getIdScanCustomization().buttonTextSpacing = 0.05f;
-            currentCustomization.getIdScanCustomization().buttonTextNormalColor = buttonText;
-            currentCustomization.getIdScanCustomization().buttonBackgroundNormalColor = numio;
-            currentCustomization.getIdScanCustomization().buttonTextHighlightColor = buttonText;
-            currentCustomization.getIdScanCustomization().buttonBackgroundHighlightColor = Color.parseColor("#BFFFFFFF");
+            currentCustomization.getIdScanCustomization().buttonTextNormalColor = buttonTextColor;
+            currentCustomization.getIdScanCustomization().buttonBackgroundNormalColor = primaryColor;
+            currentCustomization.getIdScanCustomization().buttonTextHighlightColor = backgroundColor;
+            currentCustomization.getIdScanCustomization().buttonBackgroundHighlightColor = buttonBackgroundHighlightColor;
             currentCustomization.getIdScanCustomization().buttonTextDisabledColor = backgroundColor;
-            currentCustomization.getIdScanCustomization().buttonBackgroundDisabledColor = numio;
+            currentCustomization.getIdScanCustomization().buttonBackgroundDisabledColor = buttonBackgroundDisabledColor;
             currentCustomization.getIdScanCustomization().buttonBorderColor = backgroundColor;
-            currentCustomization.getIdScanCustomization().buttonBorderWidth = 1;
-            currentCustomization.getIdScanCustomization().buttonCornerRadius = 30;
+            currentCustomization.getIdScanCustomization().buttonBorderWidth = 0;
+            currentCustomization.getIdScanCustomization().buttonCornerRadius = 14;
             currentCustomization.getIdScanCustomization().buttonRelativeWidth = 1.0f;
-            currentCustomization.getIdScanCustomization().captureScreenTextBackgroundColor = backgroundColor;
-            currentCustomization.getIdScanCustomization().captureScreenFocusMessageTextColor = primaryColor;
-           currentCustomization.getIdScanCustomization().captureScreenTextBackgroundBorderColor = backgroundColor;
-            currentCustomization.getIdScanCustomization().captureScreenTextBackgroundBorderWidth = 2;
-            currentCustomization.getIdScanCustomization().captureScreenTextBackgroundCornerRadius = 2;
-            currentCustomization.getIdScanCustomization().reviewScreenTextBackgroundColor = primaryColor;
-            currentCustomization.getIdScanCustomization().reviewScreenTextBackgroundBorderColor = backgroundColor;
-            currentCustomization.getIdScanCustomization().reviewScreenTextBackgroundBorderWidth = 2;
-            currentCustomization.getIdScanCustomization().reviewScreenTextBackgroundCornerRadius = 2;
+            currentCustomization.getIdScanCustomization().captureScreenTextBackgroundColor = Color.parseColor("#00ff0000");
+            currentCustomization.getIdScanCustomization().captureScreenFocusMessageTextColor = textColor;
+           currentCustomization.getIdScanCustomization().captureScreenTextBackgroundBorderColor = Color.parseColor("#00ff0000");
+            currentCustomization.getIdScanCustomization().captureScreenTextBackgroundBorderWidth = 0;
+            currentCustomization.getIdScanCustomization().captureScreenTextBackgroundCornerRadius = 5;
+            currentCustomization.getIdScanCustomization().reviewScreenTextBackgroundColor = backgroundColor;
+            currentCustomization.getIdScanCustomization().reviewScreenTextBackgroundBorderColor = Color.parseColor("#00ff0000");
+            currentCustomization.getIdScanCustomization().reviewScreenTextBackgroundBorderWidth = 0;
+            currentCustomization.getIdScanCustomization().reviewScreenTextBackgroundCornerRadius = 5;
             currentCustomization.getIdScanCustomization().captureScreenBackgroundColor = backgroundColor;
-            currentCustomization.getIdScanCustomization().captureFrameStrokeColor = primaryColor;
+            currentCustomization.getIdScanCustomization().captureFrameStrokeColor = secondaryColor;
             currentCustomization.getIdScanCustomization().captureFrameStrokeWidth = 2;
             currentCustomization.getIdScanCustomization().captureFrameCornerRadius = 12;
             currentCustomization.getIdScanCustomization().activeTorchButtonImage = R.drawable.torch_active_white;
@@ -127,13 +135,13 @@ public class ThemeHelpers {
             currentCustomization.getResultScreenCustomization().backgroundColors = backgroundColor;
             currentCustomization.getResultScreenCustomization().foregroundColor = primaryColor;
             currentCustomization.getResultScreenCustomization().messageFont  = ResourcesCompat.getFont(context, R.font.nunito_bold);
-            currentCustomization.getResultScreenCustomization().messageTextSize = 18;
+            currentCustomization.getResultScreenCustomization().messageTextSize = 20;
             currentCustomization.getResultScreenCustomization().messageTextSpacing = 0.05f;
-            currentCustomization.getResultScreenCustomization().activityIndicatorColor = primaryColor;
+            currentCustomization.getResultScreenCustomization().activityIndicatorColor = secondaryColor;
             currentCustomization.getResultScreenCustomization().customActivityIndicatorImage = R.drawable.activity_indicator_white;
             currentCustomization.getResultScreenCustomization().customActivityIndicatorRotationInterval = 1000;
             currentCustomization.getResultScreenCustomization().customActivityIndicatorAnimation = 0;
-            currentCustomization.getResultScreenCustomization().resultAnimationBackgroundColor = backgroundColor;
+            currentCustomization.getResultScreenCustomization().resultAnimationBackgroundColor = secondaryColor;
             currentCustomization.getResultScreenCustomization().resultAnimationForegroundColor = primaryColor;
             currentCustomization.getResultScreenCustomization().resultAnimationSuccessBackgroundImage = R.drawable.reticle_white;
             currentCustomization.getResultScreenCustomization().resultAnimationUnsuccessBackgroundImage = R.drawable.reticle_white;
@@ -142,31 +150,32 @@ public class ThemeHelpers {
             currentCustomization.getResultScreenCustomization().customStaticResultAnimationSuccess = 0;
             currentCustomization.getResultScreenCustomization().customStaticResultAnimationUnsuccess = 0;
             currentCustomization.getResultScreenCustomization().showUploadProgressBar = true;
-            currentCustomization.getResultScreenCustomization().uploadProgressTrackColor = Color.parseColor("#33FFFFFF");
+            currentCustomization.getResultScreenCustomization().uploadProgressTrackColor = secondaryColor;
             currentCustomization.getResultScreenCustomization().uploadProgressFillColor = primaryColor;
             currentCustomization.getResultScreenCustomization().animationRelativeScale = 1.0f;
             // Feedback Customization
             currentCustomization.getFeedbackCustomization().backgroundColors = primaryColor;
-            currentCustomization.getFeedbackCustomization().textColor = backgroundColor;
+            currentCustomization.getFeedbackCustomization().textColor = buttonTextColor;
             currentCustomization.getFeedbackCustomization().textFont = ResourcesCompat.getFont(context, R.font.nunito_bold);
-            currentCustomization.getFeedbackCustomization().textSize = 18;
+            currentCustomization.getFeedbackCustomization().textSize = 20;
             currentCustomization.getFeedbackCustomization().textSpacing = 0.05f;
-            currentCustomization.getFeedbackCustomization().cornerRadius = 2;
+            currentCustomization.getFeedbackCustomization().cornerRadius = 5;
             currentCustomization.getFeedbackCustomization().elevation = 0;
             currentCustomization.getFeedbackCustomization().relativeWidth = 1.0f;
             // Frame Customization
             currentCustomization.getFrameCustomization().backgroundColor = backgroundColor;
-            currentCustomization.getFrameCustomization().borderColor = numio;
+            currentCustomization.getFrameCustomization().borderColor = secondaryColor;
             currentCustomization.getFrameCustomization().borderWidth = 0;
             currentCustomization.getFrameCustomization().cornerRadius = 0;
             currentCustomization.getFrameCustomization().elevation = 0;
             // Oval Customization
-            currentCustomization.getOvalCustomization().strokeColor = primaryColor;
-            currentCustomization.getOvalCustomization().progressColor1 = Color.parseColor("#BFFFFFFF");
-            currentCustomization.getOvalCustomization().progressColor2 = Color.parseColor("#BFFFFFFF");
+            currentCustomization.getOvalCustomization().strokeColor = secondaryColor;
+            currentCustomization.getOvalCustomization().progressColor1 = Color.parseColor("#f18679");
+            currentCustomization.getOvalCustomization().progressColor2 = Color.parseColor("#f18679");
             // Cancel Button Customization
-            currentCustomization.getCancelButtonCustomization().customImage = R.drawable.cancel_navy;
-            currentCustomization.getCancelButtonCustomization().setLocation(ZoomCancelButtonCustomization.ButtonLocation.TOP_LEFT);
+            currentCustomization.getCancelButtonCustomization().customImage = R.drawable.arrow_left;
+            currentCustomization.getCancelButtonCustomization().setLocation(ZoomCancelButtonCustomization.ButtonLocation.CUSTOM);
+            currentCustomization.getCancelButtonCustomization().setCustomLocation(new Rect(20, 30, 32, 32));
         return currentCustomization;
     }
 
@@ -207,7 +216,7 @@ public class ThemeHelpers {
        currentLowLightCustomization.getGuidanceCustomization().buttonBorderWidth = 1;
 //            currentLowLightCustomization.getGuidanceCustomization().buttonCornerRadius = 2;
        currentLowLightCustomization.getGuidanceCustomization().buttonRelativeWidth = 1.0f;
-       currentLowLightCustomization.getGuidanceCustomization().readyScreenOvalFillColor = Color.parseColor("#4DFFFFFF");
+       currentLowLightCustomization.getGuidanceCustomization().readyScreenOvalFillColor = Color.parseColor("#00ff0000");
        currentLowLightCustomization.getGuidanceCustomization().readyScreenTextBackgroundColor = backgroundColor;
        currentLowLightCustomization.getGuidanceCustomization().readyScreenTextBackgroundCornerRadius = 2;
        currentLowLightCustomization.getGuidanceCustomization().readyScreenSubtextTextColor = numio;

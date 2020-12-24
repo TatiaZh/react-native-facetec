@@ -45,7 +45,7 @@ public class FacetecModule extends ReactContextBaseJavaModule {
         super(context);
         reactContext = context;
         ThemeHelpers themeHelpers = new ThemeHelpers(context);
-        themeHelpers.setAppTheme("Sample Bank");
+        themeHelpers.setAppTheme("Pseudo-Fullscreen");
     }
 
     @Override
@@ -129,6 +129,20 @@ public class FacetecModule extends ReactContextBaseJavaModule {
       this.onSuccess = onSuccess;
       this.onFail = onFail;
       latestProcessor = new PhotoIDMatchProcessor(id,  getCurrentActivity(), sessionTokenErrorCallback, sessionTokenSuccessCallback);
+    }
+
+    @ReactMethod
+    public void setLanguage(String loc) {
+     // Override application language with the selected locale
+     Locale locale = new Locale(loc);
+     Configuration config = reactContext.getBaseContext().getResources().getConfiguration();
+     config.setLocale(locale);
+
+     // Update current activity's configuration
+     reactContext.getBaseContext().getResources().updateConfiguration(config, reactContext.getBaseContext().getResources().getDisplayMetrics());
+
+     // Update application's configuration so the FaceTec SDK will be updated
+     reactContext.getApplicationContext().getResources().updateConfiguration(config, reactContext.getBaseContext().getResources().getDisplayMetrics());
     }
 
     Processor.SessionTokenErrorCallback sessionTokenErrorCallback = new Processor.SessionTokenErrorCallback() {

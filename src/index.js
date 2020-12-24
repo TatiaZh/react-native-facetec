@@ -27,4 +27,8 @@ export function CheckId(id, onSuccess, onFail) {
   Facetec.CheckId(id, onSuccess, onFail);
 }
 
+export function setLanguage(locale) {
+  Facetec.setLanguage(locale);
+}
+
 export default { init, enroll, authenticateUser, livenessCheck, CheckId };

@@ -199,7 +199,7 @@ public class NetworkingHelpers {
         String sessionId = zoomIDScanResult.getIDScanMetrics().getSessionId();
         JSONObject parameters = new JSONObject();
         try {
-            parameters.put("enrollmentIdentifier", id);
+            parameters.put("enrollmentIdentifier", ZoomGlobalState.randomUsername);
             parameters.put("idScan", zoomIDScanBase64);
             parameters.put("sessionId", sessionId);
 
