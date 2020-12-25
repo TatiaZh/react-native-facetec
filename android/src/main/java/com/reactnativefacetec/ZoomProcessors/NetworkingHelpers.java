@@ -266,7 +266,7 @@ public class NetworkingHelpers {
     public static void getPhotoIDMatchResponseFromZoomServer(String id, ZoomIDScanResult zoomIDScanResult, ZoomIDScanResultCallback zoomIDScanResultCallback, FaceTecManagedAPICallback resultCallback ){
         JSONObject parameters = getPhotoIDParameters(id, zoomIDScanResult);
         callFaceTecManagedAPIForIDCheck(
-                ZoomGlobalState.ZoomServerBaseURL + "/id-check",
+                ZoomGlobalState.ZoomServerBaseURL + "/verify-with-ocr",
                 parameters,
                 zoomIDScanResult,
                 zoomIDScanResultCallback,
