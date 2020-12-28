@@ -1,0 +1,50 @@
+<!-- This is a generated file.  Do not manually edit this and commit changes. -->
+
+<resources xmlns:tools="http://schemas.android.com/tools">
+  <string name="zoom_accessibility_cancel_button">отменa</string>
+  <string name="zoom_accessibility_torch_button">Переключить свет</string>
+  <string name="zoom_action_ok">подтвердить</string>
+  <string name="zoom_action_im_ready">Я готов</string>
+  <string name="zoom_action_select_id_card">удостоверение личности</string>
+  <string name="zoom_action_select_passport">паспорт</string>
+  <string name="zoom_action_take_photo">Сделать фото</string>
+  <string name="zoom_action_retake_photo">занова</string>
+  <string name="zoom_action_accept_photo">подтвердить</string>
+  <string name="zoom_camera_permission_header">Включить камеру</string>
+  <string name="zoom_camera_permission_message_enroll">Включите камеру селфи</string>
+  <string name="zoom_camera_permission_message_auth">Доступ к вашей камеры отключен. Нажмите ниже, чтобы изменить настройки.</string>
+  <string name="zoom_camera_permission_enable_camera">Bключить камеру</string>
+  <string name="zoom_camera_permission_launch_settings">Настройки запуска</string>
+  <string name="zoom_feedback_center_face">лицо в центре</string>
+  <string name="zoom_feedback_face_not_found">Поместите ваше лицо в рамку</string>
+  <string name="zoom_feedback_face_not_looking_straight_ahead">Смотрите прямо</string>
+  <string name="zoom_feedback_face_not_upright">Держите голову прямо</string>
+  <string name="zoom_feedback_hold_steady">постарайтесь не двигаться</string>
+  <string name="zoom_feedback_move_phone_away">Oтодвиньтесь\u0020\u0020от камеры</string>
+  <string name="zoom_feedback_move_phone_closer">Подойдите ближе</string>
+  <string name="zoom_feedback_move_phone_even_closer">Hедостаточно близко</string>
+  <string name="zoom_feedback_move_phone_to_eye_level">Поднимите камеру до уровня глаз</string>
+  <string name="zoom_feedback_use_even_lighting">Светлое лицо более равномерно</string>
+  <string name="zoom_idscan_type_selection_header">Выберите свой\nID тип документа</string>
+  <string name="zoom_idscan_capture_tap_to_focus_message">Нажмите на экран для фокуса</string>
+  <string name="zoom_idscan_capture_hold_steady_message">Старайтесь не двигаться</string>
+  <string name="zoom_idscan_capture_passport_instruction_message">Показать страницу паспортa с фотографией</string>
+  <string name="zoom_idscan_capture_id_card_front_instruction_message">Показать лицевую сторону удостоверения личности</string>
+  <string name="zoom_idscan_capture_id_card_back_instruction_message">Показать обратную сторону удостоверения личности</string>
+  <string name="zoom_idscan_review_passport_instruction_message">Подтвердите что Фото ясно и разборчивый</string>
+  <string name="zoom_idscan_review_id_card_front_instruction_message">Подтвердите что Фото ясно и разборчивый</string>
+  <string name="zoom_idscan_review_id_card_back_instruction_message">Подтвердите что Фото ясно и разборчивый</string>
+  <string name="zoom_instructions_header_ready">Приготовьтесь к\nсвоему видео-селфи</string>
+  <string name="zoom_instructions_message_ready">Поместите ваше лицо в овальную рамку</string>
+  <string name="zoom_result_facemap_upload_message">Загрузка\nзашифрованная\nn3D карта лица</string>
+  <string name="zoom_result_success_message">Успех</string>
+  <string name="zoom_result_idscan_upload_message">Загрузка\nЗашифрованного\nID сканирования</string>
+  <string name="zoom_result_idscan_unsuccess_message">Фото на документы\nНе совпадает\nЛицо пользователя</string>
+  <string name="zoom_retry_header">Попробуете еще раз</string>
+  <string name="zoom_retry_subheader_message">Но сначала взгляните на свою фотографию и исправьте обстановку.</string>
+  <string name="zoom_retry_instruction_message_1">Нейтральное выражение лица, без улыбки</string>
+  <string name="zoom_retry_instruction_message_2">Без бликов или сильного освещения</string>
+  <string name="zoom_retry_your_image_label">Твое селфи</string>
+  <string name="zoom_retry_ideal_image_label">лучшая позиция</string>
+
+</resources>
