@@ -75,32 +75,32 @@ public class FacetecModule extends ReactContextBaseJavaModule {
     public void Init(Callback onSuccess, Callback onFail) {
     this.onSuccess = onSuccess;
     this.onFail = onFail;
+    String licenseText =
+       "appId = ge.qwerty.credo\n" +
+       "expiryDate = 2021-03-10\n" +
+       "key = 0030460221009e6d868fb50e2f2679fb1e6c717693754f8cd5ca58e5224625cfc5d27858bbf90221009e631109a33e506aa57c27cc50d4c4cd2f4ee1fcd0f39d88cf67a76c592741fc\n"
 
-    ZoomSDK.initialize(
-      reactContext,
-      ZoomGlobalState.DeviceLicenseKeyIdentifier,
-      ZoomGlobalState.PublicFaceMapEncryptionKey,
-      new ZoomSDK.InitializeCallback() {
-        @Override
-        public void onCompletion(final boolean successful) {
-          WritableMap params = Arguments.createMap();
-          try{
-            params.putString("initState", ZoomSDK.getStatus(getCurrentActivity()).toString());
-          }catch (Exception e){
-            e.printStackTrace();
-          }
-          if(successful){
-            params.putBoolean("successful", true);
-            onSuccess.invoke(params);
-          }
-          else{
-            onFail.invoke(params);
-            params.putBoolean("successful", false);
-          }
-          //emitDeviceEvent("initialize", params);
+    ZoomSDK.initializeWithLicense(reactContext, licenseText, ZoomGlobalState.DeviceLicenseKeyIdentifier,ZoomGlobalState.PublicFaceMapEncryptionKey,
+     new ZoomSDK.InitializeCallback() {
+       @Override
+          public void onCompletion(final boolean successful) {
+            WritableMap params = Arguments.createMap();
+            try{
+              params.putString("initState", ZoomSDK.getStatus(getCurrentActivity()).toString());
+            }catch (Exception e){
+              e.printStackTrace();
+            }
+            if(successful){
+              params.putBoolean("successful", true);
+              onSuccess.invoke(params);
+            }
+            else{
+              onFail.invoke(params);
+              params.putBoolean("successful", false);
+            }
+            //emitDeviceEvent("initialize", params);
         }
-      }
-    );
+    });
   }
 
     @ReactMethod
