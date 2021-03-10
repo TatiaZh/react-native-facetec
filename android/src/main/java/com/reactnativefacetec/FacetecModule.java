@@ -77,8 +77,8 @@ public class FacetecModule extends ReactContextBaseJavaModule {
     this.onFail = onFail;
     String licenseText =
        "appId = ge.qwerty.credo\n" +
-       "expiryDate = 2021-03-10\n" +
-       "key = 0030460221009e6d868fb50e2f2679fb1e6c717693754f8cd5ca58e5224625cfc5d27858bbf90221009e631109a33e506aa57c27cc50d4c4cd2f4ee1fcd0f39d88cf67a76c592741fc\n";
+       "expiryDate = 2021-07-10\n" +
+       "key = 00304402206b43f2d7132b039aa82349bb143dee7db9aad50f68b0ebf276d59e87cd21f283022066dd70dd56c5a5cab9291a7d8a5e13d6c830ad4355f18d5d09c5fa72fd7d1497\n";
 
     ZoomSDK.initializeWithLicense(reactContext, licenseText, ZoomGlobalState.DeviceLicenseKeyIdentifier,ZoomGlobalState.PublicFaceMapEncryptionKey,
      new ZoomSDK.InitializeCallback() {
